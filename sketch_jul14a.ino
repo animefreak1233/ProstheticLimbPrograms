@@ -5,15 +5,15 @@
 Servo index_finger;
 Servo middle_finger;
 Servo ring_finger;
-Servo pinky_finger;
-Servo thumb_finger;
+//Servo pinky_finger;
+//Servo thumb_finger;
 
 //Finger - pin defs
-int index_ = 3;
-int middle_ = 6;
+int index_ = 9;
+int middle_ = 10;
 int ring_ = 11;
-int pinky_ = 10;
-int thumb_ = 9;
+//int pinky_ = 10;
+//int thumb_ = 9;
 //Input pin definitions
 int input_0 = 0;
 int input_1 = 1;
@@ -47,13 +47,13 @@ void setup(){
   pinMode(index_, OUTPUT);
   pinMode(middle_, OUTPUT);
   pinMode(ring_, OUTPUT);
-  pinMode(pinky_, OUTPUT);
-  pinMode(thumb_, OUTPUT);
+  //pinMode(pinky_, OUTPUT);
+  //pinMode(thumb_, OUTPUT);
   index_finger.attach(index_);
   middle_finger.attach(middle_);
   ring_finger.attach(ring_);
-  pinky_finger.attach(pinky_);
-  thumb_finger.attach(thumb_);
+  //pinky_finger.attach(pinky_);
+  //thumb_finger.attach(thumb_);
   
 }
 
@@ -84,6 +84,6 @@ void write_to_servo(hand_pos hand){
   index_finger.write(hand.index);
   middle_finger.write(hand.middle);
   ring_finger.write(hand.ring);
-  pinky_finger.write(hand.pinky);
-  thumb_finger.write(hand.thumb);
+  //pinky_finger.write(hand.pinky);
+  //thumb_finger.write(hand.thumb);
 }
